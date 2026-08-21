@@ -110,6 +110,16 @@
       color: #e2e8f0;
     }
 
+    .code-inline {
+      background-color: #0f172a;
+      border: 1px solid var(--border-color);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      color: #38bdf8;
+      font-size: 0.9em;
+    }
+
     footer {
       margin-top: 40px;
       padding-top: 24px;
@@ -144,36 +154,41 @@
       </div>
 
       <h2>1. Information We Collect & How It Is Used</h2>
-      <p>We practice data minimization and collect only the minimum information necessary to provide and license the application:</p>
+      <p>We practice strict data minimization. CoordiPro only processes the minimal information required to activate licenses, deliver updates, and receive user-submitted feedback:</p>
       <ul>
-        <li><strong>No CAD / Drawing Data:</strong> CoordiPro operates 100% locally within Autodesk® AutoCAD®. No drawing geometry, coordinates, layer data, project metadata, or CAD files (.dwg, .dxf) are collected, monitored, or transmitted to external servers.</li>
-        <li><strong>License Activation & Validation:</strong> When activating a paid license, the application transmits the license key and an anonymized hardware identifier (one-way machine hash) over secure HTTPS/TLS to our licensing provider (Lemon Squeezy) strictly to enforce per-seat activation limits.</li>
-        <li><strong>Software Updates:</strong> The application may periodically query a public repository manifest over HTTPS to check for new versions. No telemetry, machine profiles, or personal data are collected during update checks.</li>
-        <li><strong>User Preferences:</strong> Custom configuration settings (e.g., coordinate formatting, prefix rules, UI settings) are stored locally on your workstation and are never transmitted externally.</li>
+        <li><strong>Zero CAD / Drawing Data Collection:</strong> All coordinate labeling, grid alignment, leader annotation, and CAD geometry processing occur strictly on your local computer inside Autodesk® AutoCAD®. No drawing content, layer information, geometry coordinates, or CAD files (.dwg, .dxf) are ever transmitted to external servers or monitored by us.</li>
+        <li><strong>License Activation & Validation:</strong> When activating or verifying a license key, the application connects via encrypted HTTPS to our secure validation proxy. It transmits only the license key and an anonymized hardware hash (derived locally from processor and motherboard hardware identifiers) to enforce per-seat activation limits.</li>
+        <li><strong>In-App Feedback & Bug Reports:</strong> When you voluntarily submit feedback using the <span class="code-inline">Feedback</span> tab in the in-app configuration window, the form transmits your message, selected category, and optional reply email. If the diagnostic checkbox is enabled, non-personal system diagnostic information (AutoCAD version, OS version, plugin build version, and masked license key suffix) is included to assist in troubleshooting.</li>
+        <li><strong>Software Updates:</strong> The plugin may check a secure public repository over HTTPS for version manifests. No personal data, telemetry, or system profiles are sent during update checks.</li>
+        <li><strong>Local Configuration:</strong> User preferences (e.g., coordinate format, prefix rules, UI settings) are stored exclusively in your workstation's local registry/storage (<span class="code-inline">HKCU\Software\BoostWorkLab\CoordiPro</span>) and are never sent externally.</li>
       </ul>
 
       <h2>2. Third-Party Data Sharing & Protection</h2>
-      <p>We do not sell, rent, trade, or monetize user data with third-party advertisers or data brokers.</p>
-      <p>Third-party service providers involved with our service delivery provide data protection standards equal to or greater than those stated in this Privacy Policy:</p>
+      <p>We do not sell, rent, trade, or share user information with third-party advertising networks, data brokers, or analytics tracking SDKs.</p>
+      <p>We only interface with trusted operational service providers necessary for license validation and feedback delivery, each adhering to strict security and GDPR/CCPA data protection standards:</p>
       <ul>
-        <li><strong>Lemon Squeezy (Merchant of Record / Licensing):</strong> Processes orders, billing, and cryptographic license validation under strict GDPR/CCPA data compliance standards.</li>
-        <li><strong>GitHub:</strong> Hosts public application setup files and update manifests over HTTPS.</li>
+        <li><strong>Lemon Squeezy:</strong> Merchant of record handling order processing and license seat management with enterprise-grade encryption and compliance.</li>
+        <li><strong>Vercel & Resend:</strong> Secure cloud API proxy and transactional relay used exclusively to deliver encrypted feedback submissions and licensing validation requests.</li>
+        <li><strong>GitHub:</strong> Hosts public application setup files and version manifests over HTTPS.</li>
       </ul>
+      <p>All third-party service providers interacting with application workflows provide equivalent data protection safeguards as stated in this Privacy Policy.</p>
 
       <h2>3. Data Retention & Deletion Policy</h2>
       <ul>
-        <li><strong>Retention:</strong> License activation records and anonymized hardware hashes are retained only for the duration of the active software license/subscription to maintain product support.</li>
-        <li><strong>Deletion:</strong> Upon license termination, expiration, or upon customer request, associated licensing records and hardware hashes are permanently purged within 30 days.</li>
-        <li><strong>Local Storage:</strong> All locally stored configurations and caches are permanently removed when uninstalling the application from your workstation.</li>
+        <li><strong>Licensing Data:</strong> License activation records and hardware hash associations are retained only as long as your license/subscription is active or needed to maintain support.</li>
+        <li><strong>Feedback Data:</strong> Feedback messages and optional email addresses are retained solely for troubleshooting and customer response purposes, and are purged once resolved.</li>
+        <li><strong>Data Deletion:</strong> Upon license deactivation, expiration, or customer request, associated licensing records and hardware hashes are permanently purged within 30 days.</li>
+        <li><strong>Local Storage:</strong> All local settings and caches stored in your Windows registry and local app directory can be removed immediately at any time by uninstalling the application.</li>
       </ul>
 
-      <h2>4. User Consent, Revocation & Data Deletion Requests</h2>
-      <p>Users have the right to revoke consent and request deletion of their licensing information at any time under GDPR/CCPA regulations:</p>
+      <h2>4. User Rights, Consent Revocation & Contact Information</h2>
+      <p>You maintain complete control over your data. Under applicable privacy regulations (including GDPR and CCPA), you have the right to request access to, correction of, or deletion of your licensing data and submitted contact details, as well as revoke consent.</p>
+      <p><strong>How to Contact Us & Submit Requests:</strong></p>
       <ul>
-        <li>To request the deletion of your customer records or license history, email our support team at <a href="mailto:support@boostworklab.com">support@boostworklab.com</a>.</li>
-        <li>Requests are verified and completed within 30 days.</li>
-        <li>You may cease all local data processing immediately by uninstalling the application.</li>
+        <li><strong>In-App Contact (Direct):</strong> Run the <span class="code-inline">CPCONFIGURATIONS</span> command in AutoCAD, navigate to the <strong>Feedback</strong> tab, select your inquiry type, enter your message, and click <strong>Submit Feedback</strong>.</li>
+        <li><strong>Deactivation / Removal:</strong> You can revoke device authorization directly inside the plugin's License tab by clicking <strong>Deactivate License</strong>, or by uninstalling the application.</li>
       </ul>
+      <p>All verified privacy inquiries, consent revocations, and data deletion requests submitted through the in-app feedback channel are processed within 30 days.</p>
     </main>
 
     <footer>
