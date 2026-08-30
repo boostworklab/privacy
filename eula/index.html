@@ -1,1 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End User License Agreement (EULA) | CoordiPro</title>
+    <meta name="description" content="End User License Agreement (EULA) and Terms of Service for CoordiPro — Professional AutoCAD Shipbuilding Coordinate Annotation Tool by BoostWorkLab.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --nord0: #2E3440;
+            --nord1: #3B4252;
+            --nord2: #434C5E;
+            --nord3: #4C566A;
+            --nord4: #D8DEE9;
+            --nord5: #E5E9F0;
+            --nord6: #ECEFF4;
+            --nord7: #8FBCBB;
+            --nord8: #88C0D0;
+            --nord9: #81A1C1;
+            --nord10: #5E81AC;
+            --nord11: #BF616A;
+            --nord12: #D08770;
+            --nord13: #EBCB8B;
+            --nord14: #A3BE8C;
+            --nord15: #B48EAD;
+            --bg-page: #0f141c;
+            --bg-card: #181f2a;
+            --bg-card-header: #202938;
+            --border-subtle: #2b3648;
+            --border-focus: #88C0D0;
+            --text-primary: #F0F4F8;
+            --text-secondary: #9AA6B8;
+            --text-muted: #6B7A90;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.65;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Top Navigation Header */
+        header {
+            background-color: rgba(24, 31, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--nord6);
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-badge {
+            background: linear-gradient(135deg, var(--nord8), var(--nord10));
+            color: var(--nord0);
+            font-size: 11px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.15s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--nord8);
+        }
+
+        .nav-links a.active {
+            color: var(--nord8);
+            font-weight: 600;
+        }
+
+        /* Main Document Wrapper */
+        .page-wrapper {
+            max-width: 960px;
+            margin: 40px auto 80px auto;
+            padding: 0 24px;
+        }
+
+        /* Document Header Card */
+        .doc-header {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 36px 40px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .doc-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--nord8), var(--nord9), var(--nord10));
+        }
+
+        .doc-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--nord6);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .doc-subtitle {
+            font-size: 16px;
+            color: var(--nord8);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .doc-metadata {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 18px;
+        }
+
+        .doc-metadata strong {
+            color: var(--nord4);
+        }
+
+        /* Important Notice Banner */
+        .notice-banner {
+            background: rgba(191, 97, 106, 0.08);
+            border: 1px solid rgba(191, 97, 106, 0.4);
+            border-left: 4px solid var(--nord11);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+        }
+
+        .notice-banner h3 {
+            color: var(--nord11);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .notice-banner p {
+            color: var(--nord5);
+            font-size: 13.5px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* Document Body & Sections */
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .section-block {
+            margin-bottom: 36px;
+        }
+
+        .section-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-heading {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--nord6);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-number {
+            color: var(--nord8);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--nord4);
+            font-size: 14.5px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Numbered & Bullet Lists */
+        ol, ul {
+            padding-left: 22px;
+            margin-bottom: 14px;
+            color: var(--nord4);
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 14.5px;
+            line-height: 1.65;
+        }
+
+        li strong {
+            color: var(--nord6);
+        }
+
+        /* Callout Boxes */
+        .callout-warning {
+            background: rgba(235, 203, 139, 0.08);
+            border: 1px solid rgba(235, 203, 139, 0.35);
+            border-left: 4px solid var(--nord13);
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin: 16px 0;
+        }
+
+        .callout-warning .callout-title {
+            color: var(--nord13);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .callout-danger {
+            background: rgba(191, 97, 106, 0.08);
+            border: 1px solid rgba(191, 97, 106, 0.35);
+            border-left: 4px solid var(--nord11);
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin: 16px 0;
+        }
+
+        .callout-danger .callout-title {
+            color: var(--nord11);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .legal-allcaps {
+            text-transform: uppercase;
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--nord5);
+            letter-spacing: 0.02em;
+        }
+
+        a {
+            color: var(--nord8);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: var(--nord7);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 32px 24px;
+            background: var(--bg-card);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .footer-content {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--nord8);
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body {
+                background: #ffffff;
+                color: #111111;
+                font-size: 12pt;
+            }
+            header, footer, .nav-links {
+                display: none;
+            }
+            .page-wrapper {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+            .doc-header, .content-card, .notice-banner, .callout-warning, .callout-danger {
+                background: transparent !important;
+                border: 1px solid #cccccc !important;
+                color: #000000 !important;
+                box-shadow: none !important;
+            }
+            .section-heading {
+                color: #000000 !important;
+                border-bottom: 1px solid #cccccc !important;
+            }
+            a {
+                color: #000000 !important;
+                text-decoration: underline;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="https://boostworklab.github.io/privacy/" class="brand-logo">
+                CoordiPro
+                <span class="brand-badge">AutoCAD Plugin</span>
+            </a>
+            <nav class="nav-links">
+                <a href="https://boostworklab.github.io/privacy/">Privacy Policy</a>
+                <a href="#" class="active">EULA &amp; Terms</a>
+                <a href="mailto:support@boostworklab.com">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="page-wrapper">
+
+        <!-- Document Header Card -->
+        <div class="doc-header">
+            <h1 class="doc-title">End User License Agreement (EULA)</h1>
+            <div class="doc-subtitle">Terms of Service &amp; Software License Agreement for CoordiPro</div>
+            <div class="doc-metadata">
+                <div><strong>Effective Date:</strong> January 1, 2026</div>
+                <div><strong>Publisher:</strong> BoostWorkLab</div>
+                <div><strong>Inquiries:</strong> <a href="mailto:support@boostworklab.com">support@boostworklab.com</a></div>
+                <div><strong>Privacy Policy:</strong> <a href="https://boostworklab.github.io/privacy/">boostworklab.github.io/privacy/</a></div>
+            </div>
+        </div>
+
+        <!-- Critical Notice Banner -->
+        <div class="notice-banner">
+            <h3>⚠️ Important Notice — Please Read Carefully</h3>
+            <p>BY DOWNLOADING, INSTALLING, COPYING, ACCESSING, OR USING THE <strong>COORDIPRO</strong> AUTOCAD PLUGIN SOFTWARE (THE "SOFTWARE"), YOU AGREE TO BE BOUND BY THE TERMS OF THIS END USER LICENSE AGREEMENT ("EULA"). IF YOU DO NOT AGREE TO THESE TERMS, DO NOT INSTALL, COPY, ACCESS, OR USE THE SOFTWARE.</p>
+        </div>
+
+        <!-- Main Agreement Card -->
+        <div class="content-card">
+
+            <!-- Section 1 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">1.</span> Grant of License</h2>
+                <p>BoostWorkLab grants you a non-exclusive, non-transferable, non-sublicensable, revocable, and limited license to install, execute, and use CoordiPro on compatible workstations owned, leased, or controlled by you, strictly in accordance with this EULA and your purchased license seat allocation (or within the authorized 30-day evaluation trial period).</p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">2.</span> Professional Marine Engineering &amp; Fabrication Disclaimer</h2>
+                <div class="callout-danger">
+                    <div class="callout-title">Critical Mandatory Notice</div>
+                    <p class="legal-allcaps">ALL COORDINATE OUTPUTS, FRAME OFFSETS (FR), CENTERLINE DISTANCES (CL), DECK ELEVATIONS (BL), FRAME SPACING CALCULATIONS, AND FABRICATION SPOOL ANNOTATIONS GENERATED BY THE SOFTWARE MUST BE INDEPENDENTLY REVIEWED AND CERTIFIED BY A QUALIFIED NAVAL ARCHITECT, LICENSED ENGINEER, OR AUTHORIZED SURVEYOR PRIOR TO ANY PHYSICAL FABRICATION, STEEL CUTTING, WELDING, OR STRUCTURAL ERECTION.</p>
+                </div>
+                <ol>
+                    <li><strong>Engineering Assistance Only:</strong> CoordiPro is designed exclusively as a computer-aided drafting (CAD) productivity and annotation utility for Autodesk® AutoCAD®. It does not replace professional naval architecture, structural FEA analysis, or certified marine engineering calculations.</li>
+                    <li><strong>Mandatory Independent Verification:</strong> The user retains full responsibility for verifying mathematical accuracy, scale orientation, layout viewport matrices, and drawing dimension units before using any generated annotations in shipyard fabrication.</li>
+                    <li><strong>No Safety-Critical Reliance:</strong> Under no circumstances shall the Software be used as the sole basis for safety-critical marine vessel construction, intact/damage stability assessments, or structural integrity certifications.</li>
+                </ol>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">3.</span> "AS IS" Warranty Disclaimer</h2>
+                <p class="legal-allcaps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong>, WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND. BOOSTWORKLAB EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, SYSTEM INTEGRATION, AND ACCURACY OF SPATIAL OR NUMERICAL DATA.</p>
+                <p>BoostWorkLab does not warrant that the functions contained in the Software will meet your specific business requirements, that the operation of the Software will be uninterrupted or error-free, or that software defects will be corrected immediately.</p>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">4.</span> Limitation of Liability &amp; Exclusion of Damages</h2>
+                <ol>
+                    <li><strong>Total Exclusion of Consequential Losses:</strong> <span class="legal-allcaps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL BOOSTWORKLAB, ITS PRINCIPALS, DEVELOPERS, EMPLOYEES, OR AFFILIATES BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES WHATSOEVER.</span></li>
+                    <li><strong>Specific Maritime &amp; Industrial Exclusions:</strong> <span class="legal-allcaps">THIS EXCLUSION SPECIFICALLY INCLUDES, WITHOUT LIMITATION, LOSS OF COMMERCIAL PROFITS, LOSS OF SHIPBUILDING OR OFFSHORE CONTRACTS, STEEL OR MATERIAL SCRAP COSTS, FABRICATION DEFECTS, STRUCTURAL REWORK EXPENSES, DRYDOCK OR SHIPYARD DELAY PENALTIES, VESSEL DOWNTIME, OR DATA LOSS, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT, STRICT LIABILITY, OR NEGLIGENCE), EVEN IF BOOSTWORKLAB HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</span></li>
+                    <li><strong>Liability Super-Cap:</strong> In all circumstances, the maximum aggregate liability of BoostWorkLab arising out of or related to this EULA or the use of the Software shall be strictly limited to the actual net amount paid by you for the CoordiPro license in the twelve (12) months preceding the claim (which shall be zero dollars [$0.00 USD] if utilizing a free trial, evaluation, or promotional license).</li>
+                </ol>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">5.</span> Intellectual Property &amp; License Protection</h2>
+                <ol>
+                    <li><strong>Ownership:</strong> BoostWorkLab retains all right, title, and interest in and to the Software, including all source code, algorithms, visual styles, UI assets, documentation, copyrights, patents, and trade secrets.</li>
+                    <li><strong>Restrictions:</strong> You shall not decompile, reverse engineer, disassemble, decrypt, bypass license token validation, or attempt to derive the source code or cryptographic mechanisms of the Software, except to the extent expressly permitted by applicable mandatory law.</li>
+                </ol>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">6.</span> Third-Party Trademarks &amp; Non-Affiliation</h2>
+                <p>Autodesk, AutoCAD, and the Autodesk logo are registered trademarks or trademarks of Autodesk, Inc., in the USA and other countries. CoordiPro is an independently developed add-on application. BoostWorkLab is not affiliated with, endorsed by, or sponsored by Autodesk, Inc.</p>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">7.</span> Privacy &amp; Data Minimization</h2>
+                <p>CoordiPro collects minimal diagnostic telemetry and one-way salted cryptographic hardware hashes (SHA-384) solely for license seat activation, fraud prevention, and update delivery, in accordance with our <a href="https://boostworklab.github.io/privacy/">Privacy Policy</a>. BoostWorkLab never inspects, collects, stores, or transmits drawing entity geometry, DWG files, or proprietary naval architectural models.</p>
+            </section>
+
+            <!-- Section 8 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">8.</span> Export Control &amp; Compliance</h2>
+                <p>You agree to comply with all applicable national and international export control laws, economic sanctions, and trade regulations. You represent and warrant that you are not located in an embargoed country or listed on any government restricted-party list (including the U.S. Treasury OFAC SDN List).</p>
+            </section>
+
+            <!-- Section 9 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">9.</span> Severability &amp; Entire Agreement</h2>
+                <p>If any provision of this EULA is held to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect. This EULA constitutes the entire agreement between you and BoostWorkLab concerning the Software and supersedes all prior representations, proposals, or understandings.</p>
+            </section>
+
+            <!-- Section 10 -->
+            <section class="section-block">
+                <h2 class="section-heading"><span class="section-number">10.</span> Governing Law &amp; Jurisdiction</h2>
+                <p>This EULA shall be governed by and construed in accordance with the laws of the jurisdiction in which BoostWorkLab operates, without regard to conflict of law principles. Any legal proceeding arising hereunder shall be subject to the exclusive jurisdiction of the competent courts in said jurisdiction.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://boostworklab.github.io/privacy/">Privacy Policy</a>
+                <span>•</span>
+                <a href="#">EULA &amp; Terms</a>
+                <span>•</span>
+                <a href="mailto:support@boostworklab.com">support@boostworklab.com</a>
+            </div>
+            <p>© 2026 BoostWorkLab. All rights reserved. Scandinavian Precision Engineering for Naval Architecture.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
