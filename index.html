@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for CoordiPro - Professional Shipbuilding Coordinate and Annotation Plugin for Autodesk® AutoCAD®">
+  <meta name="description" content="Privacy Policy for CoordiPro - Professional Shipbuilding Coordinate and Annotation Plugin for Autodesk AutoCAD">
   <meta name="author" content="BoostWorkLab">
-  <title>Privacy Policy - CoordiPro for Autodesk® AutoCAD®</title>
+  <title>Privacy Policy - CoordiPro for Autodesk AutoCAD</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg-color);
-      background-image: 
+      background-image:
         radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.07) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.05) 0px, transparent 50%);
       color: var(--text-body);
@@ -282,7 +282,7 @@
       </div>
       <h1>Publisher Privacy Policy</h1>
       <div class="meta">
-        <span><strong>Application:</strong> CoordiPro for Autodesk® AutoCAD®</span>
+        <span><strong>Application:</strong> CoordiPro for Autodesk® AutoCAD</span>
         <span><strong>Publisher:</strong> BoostWorkLab</span>
         <span><strong>Effective Date:</strong> August 2026</span>
       </div>
@@ -290,7 +290,7 @@
 
     <main>
       <div class="highlight-box">
-        <p><strong>Executive Summary:</strong> CoordiPro operates locally on your workstation inside Autodesk® AutoCAD®. We <strong>do not</strong> collect, inspect, transmit, or store your CAD drawings, geometries, annotations, metadata, or design files (<span class="code-inline">.dwg</span> / <span class="code-inline">.dxf</span>). We <strong>never</strong> sell your personal data or share it with advertising networks.</p>
+        <p><strong>Executive Summary:</strong> CoordiPro operates locally on your workstation inside Autodesk AutoCAD. We <strong>do not</strong> collect, inspect, transmit, or store your CAD drawings, geometries, annotations, metadata, or design files (<span class="code-inline">.dwg</span> / <span class="code-inline">.dxf</span>). We <strong>never</strong> sell your personal data or share it with advertising networks.</p>
       </div>
 
       <div class="grid-cards">
@@ -300,7 +300,7 @@
         </div>
         <div class="card">
           <div class="card-title">🔒 Secure Payments</div>
-          <p>Purchases and licensing are processed by Lemon Squeezy (PCI-DSS Level 1 Compliant Merchant of Record).</p>
+          <p>Purchases and licensing are processed by Lemon Squeezy, a PCI-DSS Level 1 compliant merchant of record.</p>
         </div>
         <div class="card">
           <div class="card-title">💻 Local Storage</div>
@@ -309,38 +309,49 @@
       </div>
 
       <h2>1. Information We Process &amp; Operational Architecture</h2>
-      <p>CoordiPro adheres to strict data minimization and privacy-by-design principles. The application is an in-process plugin for Autodesk® AutoCAD® and operates under the following conditions:</p>
+      <p>CoordiPro adheres to strict data minimization and privacy-by-design principles. The application is an in-process plugin for Autodesk AutoCAD and operates under the following conditions:</p>
       <ul>
-        <li><strong>Zero CAD / Drawing Data Transmission:</strong> All coordinate evaluations, frame offset conversions (e.g., <span class="code-inline">FR54+250</span>), centerline calculations, deck height referencing, and Multileader (<span class="code-inline">MLeader</span>) entity placements execute strictly on your local computer. Active project links are saved directly into the active drawing database (<span class="code-inline">.dwg</span>) using standard AutoCAD Named Objects Dictionaries (<span class="code-inline">DBDictionary</span> / <span class="code-inline">Xrecord</span>). No drawing geometry, coordinates, or proprietary project structures are ever transmitted externally.</li>
-        <li><strong>Payment &amp; Order Processing (Lemon Squeezy):</strong> All orders, checkout transactions, invoicing, and tax/VAT calculations are securely managed by our merchant of record, <strong>Lemon Squeezy</strong>. BoostWorkLab never collects, sees, or stores your credit card, debit card, or banking credentials.</li>
-        <li><strong>License Activation &amp; Seat Validation:</strong> When activating or verifying a license key, the application communicates securely over HTTPS (TLS 1.2/1.3) with our serverless validation API powered by Lemon Squeezy. It transmits only your license key and an anonymized hardware identifier hash (a cryptographically salted SHA-384 digest generated locally) to enforce single-user or multi-seat license activation limits.</li>
-        <li><strong>Offline Grace Period &amp; Data Security:</strong> Cached license tokens and validation states are encrypted on your workstation using the Windows Data Protection API (<span class="code-inline">DPAPI</span>) with current-user scope, allowing seamless offline CAD workflows for up to 7 days without continuous internet connectivity.</li>
-        <li><strong>Local User &amp; Project Presets:</strong> Project parameters (including frame intervals, deck elevations, longitudinal offsets, text styles, arrowheads, and landing gaps) are stored locally on your workstation at <span class="code-inline">%APPDATA%\CoordiPro\coordipro_projects.json</span>. This data is utilized solely by your local AutoCAD sessions and is never uploaded.</li>
-        <li><strong>User-Initiated Feedback &amp; Diagnostics:</strong> If you choose to submit feedback or bug reports via the Configuration dialog (<span class="code-inline">CPCONFIGURATIONS</span>), only the text you provide along with basic diagnostic details (AutoCAD version, OS version, CoordiPro version, and a masked license key) are transmitted. This action is 100% voluntary and user-initiated.</li>
+        <li><strong>Zero CAD Telemetry:</strong> All coordinate evaluations, frame offset conversions (e.g., <span class="code-inline">FR54+250</span>), centerline calculations, deck height referencing, and Multileader (<span class="code-inline">MLeader</span>) entity placements execute strictly on your local computer. Active project links are saved directly into the active drawing database (<span class="code-inline">.dwg</span>) using standard AutoCAD Named Objects Dictionaries (<span class="code-inline">DBDictionary</span> / <span class="code-inline">Xrecord</span>). No drawing geometry, coordinates, or proprietary project structures are ever transmitted externally.</li>
+        <li><strong>Payment &amp; Order Processing (Lemon Squeezy):</strong> All orders, checkout transactions, invoicing, and tax/VAT calculations are securely managed by our merchant of record, Lemon Squeezy. BoostWorkLab never collects, sees, or stores your credit card, debit card, or banking credentials.</li>
+        <li><strong>License Activation &amp; Seat Validation:</strong> When activating or verifying a license key, the application communicates securely over HTTPS (TLS 1.2/1.3) with our serverless validation API powered by Lemon Squeezy. It transmits only your license key and an anonymized hardware identifier hash. This hash is a cryptographically salted SHA-384 digest generated locally on your machine, and it is used solely to enforce single-user or multi-seat license activation limits.</li>
+        <li><strong>Offline Grace Period &amp; Data Security:</strong> Cached license tokens and validation states are encrypted on your workstation using the Windows Data Protection API (<span class="code-inline">DPAPI</span>) with current-user scope, allowing seamless offline CAD workflows for up to 3 days without continuous internet connectivity.</li>
+        <li><strong>Local User &amp; Project Presets:</strong> Project parameters (including frame intervals, deck elevations, longitudinal offsets, text styles, arrowheads, and landing gaps) are stored locally on your workstation at <span class="code-inline">%APPDATA%\CoordiPro\coordipro_projects.json</span>. This data is used solely by your local AutoCAD sessions and is never uploaded.</li>
+        <li><strong>User-Initiated Feedback &amp; Diagnostics:</strong> If you choose to submit feedback or bug reports via the Configuration dialog (<span class="code-inline">CPCONFIGURATIONS</span>), the text you provide is transmitted along with basic diagnostic details: AutoCAD version, OS version, CoordiPro version, license validity status, a masked license key, and your anonymized instance ID. If you optionally provide a reply-to email address, that is transmitted as well. This action is entirely voluntary and user-initiated.</li>
         <li><strong>Zero Tracking SDKs:</strong> CoordiPro contains no background telemetry beacons, marketing trackers, advertising SDKs, or keystroke loggers.</li>
       </ul>
 
       <h2>2. Third-Party Services &amp; Data Sharing</h2>
-      <p>We do not sell, rent, trade, or share your personal information with third-party advertising networks, data brokers, or analytics companies. We only interface with trusted operational service providers necessary for billing, licensing, and distribution:</p>
+      <p>We do not sell, rent, trade, or share your personal information with third-party advertising networks, data brokers, or analytics companies. We only interface with trusted operational service providers necessary for billing, licensing, support, and distribution:</p>
       <ul>
-        <li><strong>Lemon Squeezy:</strong> Merchant of record handling order processing, PCI-DSS compliant payment processing, and license seat management with enterprise-grade encryption. (<a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener noreferrer">Lemon Squeezy Privacy Policy</a>)</li>
-        <li><strong>Autodesk® App Store:</strong> If downloaded via the Autodesk App Store, distribution and account access are governed by Autodesk's Terms of Service and Privacy Statement.</li>
-        <li><strong>GitHub:</strong> Hosts public documentation, version update manifests (<span class="code-inline">version.json</span>), setup installers, and issue trackers over secure HTTPS.</li>
+        <li><strong>Lemon Squeezy:</strong> Merchant of record handling order processing, PCI-DSS compliant payment processing, and license seat management. (<a href="https://www.lemonsqueezy.com/privacy" target="_blank" rel="noopener noreferrer">Lemon Squeezy Privacy Policy</a>)</li>
+        <li><strong>Vercel:</strong> Hosts our serverless license-validation and feedback API endpoints. Vercel processes your request IP address transiently for abuse and rate-limiting protection; it is not stored beyond routine infrastructure logs. (<a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Privacy Policy</a>)</li>
+        <li><strong>Resend:</strong> Delivers feedback and support emails you voluntarily submit through the Configuration dialog, including the message text, optional reply-to email address, and diagnostic details described in Section 1. (<a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Resend Privacy Policy</a>)</li>
+        <li><strong>Autodesk App Store:</strong> If downloaded via the Autodesk App Store, distribution and account access are governed by Autodesk's Terms of Service and Privacy Statement. (<a href="https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement" target="_blank" rel="noopener noreferrer">Autodesk Privacy Statement</a>)</li>
+        <li><strong>GitHub:</strong> Hosts public documentation, version update manifests (<span class="code-inline">version.json</span>), setup installers, and issue trackers over secure HTTPS. (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>)</li>
       </ul>
+      <p>Some of these providers are located in, or process data in, the United States. Where required by applicable law, such transfers rely on appropriate safeguards, including Standard Contractual Clauses, as implemented by each provider.</p>
 
       <h2>3. Data Retention &amp; Deletion</h2>
       <ul>
-        <li><strong>Licensing Records:</strong> License activation records and anonymized hardware associations are retained in Lemon Squeezy solely for the duration of your active license or as required for ongoing technical support and tax compliance.</li>
-        <li><strong>Local Storage Removal:</strong> You can purge all local plugin settings and cached databases at any time by deleting the folders <span class="code-inline">%APPDATA%\CoordiPro</span> and <span class="code-inline">%LOCALAPPDATA%\BoostWorkLab\CoordiPro</span>.</li>
-        <li><strong>Drawing Metadata:</strong> Project reference dictionaries stored inside your CAD files remain entirely under your control and can be purged from any <span class="code-inline">.dwg</span> drawing at any time.</li>
-        <li><strong>Complete Uninstallation:</strong> Uninstalling CoordiPro via the Windows Control Panel / Add-Remove Programs cleanly removes the application binaries, autoloader bundle, and CUIX ribbons from your computer.</li>
+        <li><strong>Licensing Records:</strong> License activation records and anonymized hardware associations are retained by Lemon Squeezy for the duration of your active license, or as required for technical support and tax compliance.</li>
+        <li><strong>Local Storage Removal:</strong> You can remove local plugin settings and cached project databases at any time by deleting the folders <span class="code-inline">%APPDATA%\CoordiPro</span> and <span class="code-inline">%LOCALAPPDATA%\BoostWorkLab\CoordiPro</span>.</li>
+        <li><strong>Registry-Stored License Data:</strong> Your encrypted license key, instance identifier, and last-validation timestamp are additionally stored in the Windows Registry under <span class="code-inline">HKEY_CURRENT_USER\Software\BoostWorkLab\CoordiPro</span>. Uninstalling CoordiPro does not remove this registry key. To fully erase local license data: (a) deactivate your license from within the application, and (b) delete this registry key manually via Registry Editor, or contact <a href="mailto:support@boostworklab.com">support@boostworklab.com</a> for guided assistance.</li>
+        <li><strong>Drawing Metadata:</strong> Project reference dictionaries stored inside your CAD files remain entirely under your control and can be removed from any <span class="code-inline">.dwg</span> drawing at any time.</li>
+        <li><strong>Complete Uninstallation:</strong> Uninstalling CoordiPro via Windows Settings / Add-or-Remove Programs removes the application binaries, autoloader bundle, and CUIX ribbons from your computer. It does not remove the registry key described above, or files you have created in your drawings.</li>
       </ul>
 
-      <h2>4. User Rights &amp; Legal Compliance (GDPR &amp; CCPA/CPRA)</h2>
-      <p>CoordiPro complies fully with international privacy regulations, including the European General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA/CPRA).</p>
-      <p>Under these regulations, you have the right to request access to, correction of, or deletion of any licensing records associated with your email address. Because we do not collect or store your CAD drawings, geometries, or engineering telemetry, you maintain 100% sovereignty and exclusive ownership over your design data.</p>
+      <h2>4. Your Rights &amp; Legal Compliance</h2>
+      <p>BoostWorkLab is the Data Controller for the personal data described in this policy. We process this data on the following legal bases: performance of a contract (license activation and validation), legitimate interest (rate-limiting and abuse prevention), and consent (optional feedback submissions and the optional email address provided with them).</p>
+      <p>This policy is designed to align with the EU/UK General Data Protection Regulation (GDPR) and the California Consumer Privacy Act, as amended by the California Privacy Rights Act (CCPA/CPRA).</p>
+      <p>Subject to applicable law, you may have the right to: access, correct, or delete personal data we hold about you; object to or restrict certain processing; and withdraw consent at any time, without affecting the lawfulness of processing carried out before that withdrawal. California residents have the right to know, delete, correct, and limit the use of their personal information, and not to be discriminated against for exercising these rights. We do not sell or share personal information for cross-context behavioral advertising.</p>
+      <p>To exercise any of these rights, contact <a href="mailto:support@boostworklab.com">support@boostworklab.com</a>. If you are located in the EEA, UK, or Switzerland, you also have the right to lodge a complaint with your local data protection supervisory authority.</p>
+      <p>Because we do not collect or store your CAD drawings, geometries, or design telemetry, you retain full ownership and control over your design data at all times.</p>
+      <p>CoordiPro is not directed at children, and we do not knowingly collect personal data from individuals under the age of 16.</p>
 
-      <h2>5. Contact Information &amp; Support</h2>
+      <h2>5. Changes to This Policy</h2>
+      <p>We may update this policy from time to time to reflect changes in our practices, technology, legal requirements, or for other operational reasons. The "Effective Date" at the top of this page indicates when this policy was last revised. Material changes will be reflected on this page; please review it periodically.</p>
+
+      <h2>6. Contact Information &amp; Support</h2>
       <p>If you have any questions, license inquiries, or privacy requests regarding CoordiPro or this policy, please contact us:</p>
       <ul>
         <li><strong>Developer &amp; Publisher:</strong> BoostWorkLab</li>
@@ -351,9 +362,10 @@
 
     <footer>
       <p>&copy; 2026 BoostWorkLab. All rights reserved.</p>
-      <p>Autodesk, AutoCAD, and the Autodesk logo are registered trademarks of Autodesk, Inc. in the USA and/or other countries. CoordiPro is an independent add-in and is not officially affiliated with Autodesk, Inc.</p>
+      <p>Autodesk, AutoCAD, and the Autodesk logo are registered trademarks of Autodesk, Inc. in the United States and/or other countries. CoordiPro is an independent add-in and is not officially affiliated with Autodesk, Inc.</p>
     </footer>
   </div>
 
 </body>
 </html>
+
